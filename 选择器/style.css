@@ -1,0 +1,39 @@
+/*优先级：类型选择器type<类选择器class selector<ID选择器*/
+
+*{
+    /*对所有元素 */
+    font-family:"Pingfang SC";
+}
+
+h1{
+    color:green;
+}
+
+.class_para{
+    color:blue;
+}
+
+#id_para{
+    color:orange;
+}
+
+a[title]{
+    /*选择a标签中title的标签 */
+    color:blueviolet;
+}
+
+a[title="abc"]{
+    /*选择a标签中title的标签 */
+    color:rgb(226, 195, 43);
+}
+
+
+h1.oneclass{
+    /*既是h1也带了class标签*/
+    color:aquamarine
+}
+
+div h1{
+    /*父子选择器*/
+    color:brown;
+}

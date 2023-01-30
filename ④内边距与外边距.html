@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            width:200px;
+            height:200px;
+            border:10px orange solid;
+            background-color: green;
+            padding-top:100px;
+            margin-bottom:50px;
+
+            /*
+                内边距(padding)
+                    内容区和边框之间的距离是内边距
+                    -背景颜色会影响内边距（内边距相当于盒子内的部分）
+                        可以通过设置div嵌套div来用两部分颜色表示
+                    -内边距的设置会影响盒子的大小
+
+
+                    有四个方向的内边距：
+                        padding-top
+                        padding-right
+                        padding-bottom
+                        padding-left
+
+
+                盒子的可见框：内容去、内边距、边框共同决定
+                    计算盒子大小时需要将三个区域加在一起计算
+                    外边距看不见，但也是盒子的一部分
+
+
+                外边距(margin)：
+                    -外边距不会影响盒子可见框大小，但是会影响盒子的位置
+                    -一共有四个方向的外边距：
+                        margin-top
+                            -上外边距，设置一个正值，元素会向下移动
+                        margin-right
+                        margin-left
+                        margin-bottom
+                    -由于页面从左向右顺序排列
+                        默认情况下margin左和上会移动自己
+                        margin下和右会移动别人
+                    
+                    -外边距的折叠
+                        相邻垂直方向的两个盒子，它们的外边距会发生重叠现象
+                        外边距其实是跟其它块之间的距离
+                        -兄弟元素
+                            -兄弟元素之间的相邻垂直外边距会取两者之间的较大值(两者都是正值)
+                            -特殊情况：
+                                -一正一负，取两者之和
+                                -两负，取两者中绝对值较大的
+                        -父子元素
+                            -父子元素间相邻外边距，子元素的会传递给父元素（上外边距）
+                            -父子外边距的折叠会影响到页面的布局，必须处理
+                            解决方式
+                                -用padding，不用外边距
+                                -把父元素加一个边框！这样就会把子元素和父元素的外边距隔开，不混在一起了
+
+                        
+
+
+            */
+        }
+        /*此时相当于外面的box样式设置中间内容框的位置，
+        inner用来设置内边距的大小和颜色*/
+        .inner{
+            width:100%;
+            height:100%;
+            background-color:yellow;
+        }
+        .box2{
+            width:200px;
+            height:200px;
+            background-color: aquamarine;
+            padding:100px
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <div class="inner">加了inner，绿色是原来的box</div>
+    </div>
+
+    <div class="box1">没加inner</div>
+    <div class="box2">
+        <div class="inner">box2</div>
+    </div>
+
+</body>
+</html>

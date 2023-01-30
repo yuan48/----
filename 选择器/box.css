@@ -1,0 +1,17 @@
+.box{
+    width:500px;
+    height:200px;
+    background-color: aquamarine;
+    border:3px solid blue;    /*边框*/
+    padding:20px;           /*上下左右都去填充20px，或者也可以如下单独指令*/
+    padding-top:10px;
+    padding-bottom: 30px;
+
+    margin:15px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    
+    padding:10px 9px 8px 7px; /*顺时针方向上右下左*/
+    /*margin和padding的区别. margin是指从自身边框到另一个容器边框之间的距离，
+    就是容器外距离。（外边距）. padding是指自身边框到自身内部另一个容器边框之间的距离就是容器内距离*/
+}

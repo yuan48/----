@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .outer{
+            width:800px;
+            height:200px;
+            border:10px red solid;
+        }
+
+        .inner1{
+            width:200px;
+            height:200px;
+            border: purple solid;
+
+        }
+        .inner2{
+            width:200px;
+            height:200px;
+            border: purple solid;
+            margin-left:auto
+        }
+        .inner3{
+            width:100px;
+            height:200px;
+            border: purple solid;
+            margin:auto
+        }
+        .inner4{
+
+            height:200px;
+            border: purple solid;
+            margin-right:20px;
+            width:auto;
+        }
+        /*
+            内容区宽度为以下的总和S：
+                margin-left
+                border-left
+                padding-left
+                width
+                padding-right
+                border-tight
+                margin-tight
+            
+                0+0+0+200+0+0+ 0 =800
+
+            一个元素在父元素中必须满足以下等式：
+                S=父元素内容去的宽度（必须满足）
+                如果等式不成立，则称为过度约束，等式会自动调整
+                -调整情况
+                    如果七个值里没有auto的情况，则浏览器会自动调整margin-right值以使等式满足
+                -七个值有三个值可以设为auto
+                        width
+                        margin-left
+                        margin-right
+                    -如果某个值为auto，则会自动调整auto的那个值使等式成立
+
+                auto+0+0+200+0+0+auto=800  auto=300
+                如果将一个宽度和一个外边距设置为auto，则宽度会调到最大
+                如果两个外边距设置为auto，宽度固定值，则会将两边外边距设置为相同值
+                常用的元素在父元素水平居中办法：
+                    width:xxxpx
+                    margin:0 auto (0指上下为0，auto指左右auto)
+        */
+    </style>
+
+
+</head>
+<body>
+    <div class="outer">
+        <div class="inner1"></div>
+    </div>
+    <div class="outer">
+        <div class="inner2"></div>
+    </div>
+    <div class="outer">
+        <div class="inner3"></div>
+    </div>
+    <div class="outer">
+        <div class="inner4"></div>
+    </div>
+</body>
+</html>

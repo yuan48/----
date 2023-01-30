@@ -1,0 +1,70 @@
+
+grid 二维布局 行和列的布局
+.grid{
+    display:grid;
+    grid-template-columns:1fr 2fr 1fr;
+    grid-template-columns: 100px 100px 100px;
+
+    gap:24px;         /*设置间距*/
+    column-gap:24px;
+    row-gap:24px;
+
+    grid-template-areas:"header header header""sidebar content content""footer footer footer";
+
+
+    align-items:center   #每一块内部的纵向排列
+    justify-items:end    #每一块内行向排列
+    align-content:      #整块纵向
+    justify-content:    #整块横向
+}
+
+grid属性
+align-items(数轴方向)
+    center居中
+    end向下对齐
+    start 顶头
+
+header{
+    grid-area:header;
+    border:3px;
+
+}
+
+main{
+    grid-area:content;
+    border:3px;
+    background-color: aquamarine;
+    border-color: black;
+}
+
+aside{
+    grid-area:sidebar;
+    border:3px;
+}
+
+footer{
+    grid-area:footer;
+    border:3px;
+}
+
+
+
+
+
+
+flex-box 一维布局，按行或按列
+.flex{
+    display:flex;   #默认按行排列
+    flex-direction:column;   改变成列向排列
+    justify-content:content;
+    
+
+}
+
+属性justify-content（改变横轴方位）
+    flex-end:靠右对齐
+    center:居中对齐
+    space-evenly:平分空间
+    space-between:两端对齐
+
+属性align-items (改变纵向方位)

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*
+            属性选择器
+                作用：选择含有指定属性的元素
+                用法：[属性名]
+                     [属性名^=属性值]选择属性值以
+                     [属性名$=属性值]选择属性值以指定值结尾的元素
+                     [属性名*=属性值]选择属性值中含有特定值的元素
+
+                例子：p[title]  *[title]  p[title=abc]
+                      p[title^=abc]以abc开头
+
+
+            伪类选择器
+                -伪类（不存在的类，特殊的类）
+                    比如第一个子元素、被点击的元素、鼠标移入的元素...
+                -伪类一般使用:开头
+                    :first-child
+                    :last-child
+                    :nth-child(2) 选中第n个
+                        2n/even选中偶数位的元素
+                        2n+1/odd选中奇数位的元素 
+
+        */
+    </style>
+</head>
+<body>
+    <ul>
+        <li>sss</li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</body>
+</html>
